@@ -1,7 +1,14 @@
-# Annotated webpack 4 Config
+# Craft Webpack 4
 
-This is the companion github repo for the [An Annotated webpack 4 Config for Frontend Web Development](https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development) article.
+My take on nystudio107's annotated-webpack-4-config
 
-It contains the full webpack config and ancillary files discussed in the article.
+Added
+- Sass
+- Bootstrap 4
 
-Please see the article for details.
+Removed
+- Tailwinds
+
+ToDo
+- Remove Craft install articfacts
+- Swap Vue with React

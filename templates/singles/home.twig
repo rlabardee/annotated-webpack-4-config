@@ -1,0 +1,26 @@
+{% extends "layouts/main" %}
+{% block content %}
+
+<h1>Hello World</h1>
+
+{% include 'components/carousel' %}
+{% include 'components/figure' %}
+{% include 'components/header' %}
+{% include 'components/hero' %}
+{% include 'components/narrative' %}
+
+<confetti>
+</confetti>
+
+<dl>
+	<dt>Routes</dt>
+	<dd>@web:
+		<code>{{ alias('@web') }}</code>
+	</dd>
+	<dd>@webroot:
+		<code>{{ alias('@webroot') }}</code>
+	</dd>
+</dl>
+{% endblock %}
+
+

@@ -92,7 +92,7 @@ const configurePostcssLoader = (buildType) => {
     }
     if (buildType === MODERN_CONFIG) {
         return {
-            test: /\.(pcss|css)$/,
+            test: /\.(pcss|scss|css)$/,
             use: [
                 {
                     loader: 'style-loader',
@@ -103,7 +103,7 @@ const configurePostcssLoader = (buildType) => {
                 {
                     loader: 'css-loader',
                     options: {
-                        importLoaders: 2,
+                        importLoaders: 3,
                         sourceMap: true
                     }
                 },
@@ -115,6 +115,9 @@ const configurePostcssLoader = (buildType) => {
                     options: {
                         sourceMap: true
                     }
+                },
+                {
+                    loader: 'sass-loader'
                 }
             ]
         };

@@ -26,9 +26,9 @@ module.exports = {
         templates: "./templates/"
     },
     urls: {
-        live: "https://example.com/",
-        local: "http://example.test/",
-        critical: "http://example.test/",
+        live: "http://craft3.test/",
+        local: "http://craft3.test/",
+        critical: "http://craft3.test/",
         publicPath: "/dist/"
     },
     vars: {
@@ -59,7 +59,7 @@ module.exports = {
         ]
     },
     devServerConfig: {
-        public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
+        public: () => process.env.DEVSERVER_PUBLIC || "http://craft3.test",
         host: () => process.env.DEVSERVER_HOST || "localhost",
         poll: () => process.env.DEVSERVER_POLL || false,
         port: () => process.env.DEVSERVER_PORT || 8080,

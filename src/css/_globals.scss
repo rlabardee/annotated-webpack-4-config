@@ -1,0 +1,29 @@
+.button-showcase .btn {
+  margin: 0 1vw;
+}
+
+.no-outline {
+  outline: 0;
+}
+
+.placeholder {
+  height: 300vh;
+  background: linear-gradient(#ccc, $purple);
+}
+
+%scroll_reveal_element {
+  visibility: hidden;
+}
+
+html.sr .load-hidden {
+  @extend %scroll_reveal_element;
+}
+
+// .narrative figure {
+//   @extend %scroll_reveal_element;
+// }
+
+.note {
+  padding: 1rem 1rem 0;
+  display: block;
+}

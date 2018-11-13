@@ -12,8 +12,8 @@
     export default {
         mounted: function() {
             this.$confetti.start({
-                shape: 'heart',
-                colors: ['DodgerBlue', 'OliveDrab', 'Gold', 'pink', 'SlateBlue', 'lightblue', 'Violet', 'PaleGreen', 'SteelBlue', 'SandyBrown', 'Chocolate', 'Crimson'],
+                shape: 'circle',
+                colors: ['DodgerBlue'],
             });
             setTimeout(() => {
                 this.$confetti.stop();

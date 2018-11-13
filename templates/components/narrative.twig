@@ -1,0 +1,60 @@
+{% set vertical_spacing = "" %}
+{% set flex_settings   = "d-flex flex-column justify-content-center align-content-center flex-wrap" %}
+{% set grid_gutters    = "no-gutters" %}
+{% set grid_block_img  = "col-sm-12 col-md-6 col-lg-6" %}
+{% set grid_block_copy = "col-sm-12 col-md-6 col-lg-6" %}
+
+
+<div class="narrative {{vertical_spacing}}">
+  <div class="narrative__block narrative__block--right row {{grid_gutters}}">
+    <div class="{{grid_block_img}}">
+      {% include 'components/figure' %}
+    </div>
+
+    <div class="narrative__body {{grid_block_copy}} {{flex_settings}}">
+      <h3 class="sr-element">
+        Title
+      </h3>
+      <p class="sr-element">
+        Sentence
+      </p>
+      <a class="sr-element" href="#">Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="narrative {{vertical_spacing}}">
+  <div class="narrative__block narrative__block--left flex-row-reverse row {{grid_gutters}}">
+    <div class="{{grid_block_img}}">
+      {% include 'components/figure' %}
+    </div>
+
+    <div class="narrative__body {{grid_block_copy}} {{flex_settings}}">
+      <h3 class="sr-element">
+        Title
+      </h3>
+      <p class="sr-element">
+        Sentence
+      </p>
+      <a href="#" class="sr-element">Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="narrative narrative--carousel {{vertical_spacing}}">
+  <div class="narrative__block narrative__block--right row {{grid_gutters}}">
+    <div class="{{grid_block_img}}">
+      {% include 'components/carousel' %}
+    </div>
+
+    <div class="narrative__body {{grid_block_copy}} {{flex_settings}}">
+      <h3 class="sr-element">
+        Title
+      </h3>
+      <p class="sr-element">
+        Sentence
+      </p>
+      <a href="#" class="sr-element">Link</a>
+    </div>
+  </div>
+</div>

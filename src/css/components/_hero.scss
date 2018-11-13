@@ -1,0 +1,83 @@
+.hero {
+  // at smaller screen sizes, we reduce the hero's height
+  height: 100vw * 0.8;
+
+  // must at least be
+  min-height: 300px;
+
+  // on desktop, we don't go any biger than
+  max-height: 43.75rem;
+
+  position: relative;
+  text-align: center;
+
+  &.text-light .hero__headline {
+    text-shadow: 0 0 20px rgba(#000, 0.18), 0 0 100px rgba(#000, 0.5);
+  }
+}
+
+.hero__headline {
+  margin: 3rem 0 2rem;
+}
+
+.hero__richtext {
+
+}
+
+.hero__cta {
+  display: block;
+  margin: 0.5rem auto 0;
+}
+
+%hero--positioned-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero__headline,
+.hero__richtext,
+.hero__cta {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__image {
+  @extend %hero--positioned-absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0, 1.13, 0.49, 0.99) 0.1s;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+
+
+// hero with carousel
+// --
+// the height is determined by the image
+.hero.hero--carousel {
+  height: auto;
+  max-height: 100%;
+
+  .hero__body {
+    @extend %hero--positioned-absolute;
+  }
+}
+
+// carousel component in hero
+.hero__carousel {
+  width: 100%;
+
+  img {
+    pointer-events: none;
+  }
+}
